@@ -1,6 +1,6 @@
 # example-ansible
 
-ansible の練習 [getting started][getting started]をやる。
+ansibleでwslの環境を管理するために必要になりそうな諸々を実験してメモするレポジトリ。まずは、ansible の練習 [getting started][getting started]をやる。
 
 [getting started]: https://docs.ansible.com/ansible/latest/getting_started/index.html
 
