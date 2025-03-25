@@ -2,12 +2,7 @@
   hosts: myhosts
   become: yes
   tasks:
-    - name: ensure installed
-      ansible.builtin.apt:
-        name: mysql-server
-        state: latest
-    - name: ensure running
-      ansible.builtin.service:
-        name: mysql
-        state: started
-        enabled: yes
+    - name: try ping
+      ping:
+    - name: run whoami
+      command: whoami
