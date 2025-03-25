@@ -1,8 +1,13 @@
-- name: My First play
+- name: mysql
   hosts: myhosts
+  become: yes
   tasks:
-    - name: ping my hosts
-      ansible.builtin.ping:
-    - name: print message
-      ansible.builtin.debug:
-        msg: "Hello World"
+    - name: ensure installed
+      ansible.builtin.apt:
+        name: mysql-server
+        state: latest
+    - name: ensure running
+      ansible.builtin.service:
+        name: mysql
+        state: started
+        enabled: yes
