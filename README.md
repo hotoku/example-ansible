@@ -56,3 +56,8 @@ ansible-playbook -i inventory.ini playbook.yaml
 - playbooks
 - plays
 - modules: ansible が managed node にコピーする資材
+
+## sudo
+
+ユーザー hotoku で、managed node 側でパスワードなしで sudo ができるのに、ansible が`"msg": "Missing sudo password"`というエラーで失敗する。
+`ansible-playbook`に`-K`オプションを渡して適当な文字列を打つと、通る。managed node 側ではパスワードを聞かない設定が通っているが、ansible 側に、それを伝えられていない。パッと見た感じ、伝える方法も見つからず・・
